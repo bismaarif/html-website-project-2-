@@ -1,0 +1,537 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&family=Lobster&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'alkatra';
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    --bg-font: 5rem;
+    --h2-font: 2.25rem;
+    --p-font: 0.9reM;
+}
+::selection{
+    background: #ff702a;
+    color: #fff;
+}
+body{
+    background-image: url("https://img.freepik.com/free-vector/dark-black-background-design-with-stripes_1017-38064.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color:#fff ;
+    background-color: black;
+}
+header{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 170px;
+}
+.logo{
+    color: #ff702a;
+    font-weight: 600;
+    font-size: 2.4rem;
+}
+.navbar{
+    display: flex;
+    
+}
+.navbar a{
+    color:#fff ;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    font-weight: 500;
+}
+.navbar a:hover{
+    color: #ff702a;
+    transition: 0.4sec;
+}
+#menu-icon{
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+}
+section{
+    padding: 70px 17%;
+}
+.home{
+    width: 100%;
+    min-height: 90vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem;
+    align-items: center;
+}
+.home-img img{
+    max-width: 80%;
+    width: 400px;
+    height: auto;
+}
+.home-text h1{
+    font-size: var(--big-font);
+    color: #ff702a;
+}
+.gift-text{
+    width: 100%;
+    text-align: center;
+    color: aliceblue;
+    font-style:italic;
+    font-size: large;
+    margin-top: 3rem;
+  
+}
+.home-text h2{
+    font-size: var(--h2-font);
+    margin: 1rem 0 2rem;
+}
+.btn{
+    display: inline-block;
+    padding: 10px 20px;
+    background: #ff702a ;
+    color: #fff;
+    border-radius: 0.5rem;
+}
+.btn:hover{
+    transform: scale(1.2) translate(10px);
+    transition: 0.4sec;
+}
+
+@media (max-width: 1560px){
+    header{
+        padding: 15px 40px;
+    }
+    :root{
+        --big-font:3.5rem;
+        --h2-font: 2rem;
+    }
+}
+
+@media (max-width: 11400px){
+    section{
+        padding: 50px 8%;
+    }
+    #menu-icon {
+        display: initial;
+        color:#fff;
+    }
+    header.navbar{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background: #2b2640;
+        transition: 0.3sec;
+    }
+    header.navber.active{
+        top: 70px;
+    }
+    .navbar a{
+        padding: 1.5rem;
+        display: block;
+    }
+}
+
+/* *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: arial;
+} */
+
+ /* About us  */
+.wrapper{
+    width: 100%;
+    min-height: 50vh;
+    overflow: hidden;
+    background-color: #aaa;
+    background-image: url("https://e7.pngegg.com/pngimages/158/254/png-clipart-black-crystal-illustration-light-desktop-blue-black-cyan-black-background-purple-blue.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.row{
+    width: 100%;
+    padding: 50px 100px;
+}
+
+.image-section{
+    width: 30%;
+    float: left;
+}
+
+.image-section img{
+    width: 100%;
+    height: 50%;
+}
+
+.content{
+    width: 60%;
+    float: left;
+    margin-left: 50px;
+}
+
+.content h1{
+    font-size: 90px;
+    font-family: Lobster;
+    letter-spacing: 3.5px;
+    margin-top: 25px;
+    color: #fff;
+}
+
+.content h2{
+    font-size: 40px;
+    font-family: lobster;
+    color: mediumvioletred;
+    margin-top: 25px;
+}
+
+.content p{
+    font-size: 20px;
+    font-family: serif;
+    color: white;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+.container{
+    width: 90%;
+    padding: 20px;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.box{
+    width: 250px;
+    margin: 0 10px;
+    box-shadow: 0 0 20px 2px rgba(0, 0, 0, .1);
+    transition: 1s;
+}
+
+
+img{
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.box:hover{
+    transform: scale(1.3);
+    z-index: 2px;
+}
+.btn{
+    display: inline-block;
+    padding: 10px 20px;
+    background: #ff702a ;
+    color: #fff;
+    border-radius: 0.5rem;
+}
+.btn:hover{
+    transform: scale(1.2) translate(10px);
+    transition: 0.4sec;
+}
+
+
+@media screen and (max-width: 768px){
+    .image-section{
+        width: 100%;
+        float: none;
+    }
+    .content{
+        width: 100%;
+        float: none;
+        margin-left: 0px;
+    }
+    .content h1{
+        font-size: 60px;
+        letter-spacing: 2px;
+        margin-top: 30px;
+    }
+    
+    .content h2{
+        font-size: 30px;
+    }
+    
+    .content p{
+        font-size: 18px;
+        
+    }
+    
+}
+  
+
+/* Collection */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /* background-color:#0b0b0c; */
+   
+}
+.product {
+    background:url(https://img2.goodfon.com/wallpaper/big/d/b8/abstrakciya-render-fon-chernyy.jpg);
+    background-size:cover;
+}
+div {
+    display: inline-block;
+}
+
+.threeSpread {
+    width: 100%;
+    margin: 40px 0px 20px 0px;
+    /* background-image:#08080e77; */
+}
+
+
+ .heading{
+    width: 100%;
+    text-align: center;
+    color: aliceblue;
+    font-style:italic;
+    font-size: large;
+
+ }
+
+div.inner, div.outer {
+    margin: 19px;
+    text-align: center;
+    /* font-style: italic; */
+    font-size:large;
+}
+
+.unclassed {
+    text-align: center;
+    margin: 19px;
+    width: 100%;
+    /* font-style: italic; */
+    font-size:large;
+}
+
+.outer a{
+text-decoration: none;
+    color: #fdfdfc;
+    font-size: 14px;
+}
+
+.btn{
+    background-color:#FE702D;
+    cursor: pointer;
+    border:none ; 
+    /* color: rgb(10, 10, 10); */
+    font-size: 16px;
+    border-radius: 0px;
+    text-decoration:none;
+    width: 300px;
+    padding: 6px;
+}
+
+       
+
+ .inner a{
+    text-decoration: solid;
+    color: #fffefd;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 6px;
+ }
+  
+
+
+@media (max-width: 568px) {
+
+    .outer img {
+        float: left;
+        margin-right: 50px;
+    }
+
+    .inner img {
+        float: right;
+        margin-right: 50px;
+    }
+
+    h2 {
+        margin-top: 50px
+      
+      }
+      
+}
+       /* CONTACT */
+
+       @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+    font-family: 'Poppins', sans-serif
+    
+}
+
+.Contact 
+{
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px ;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    background: url(https://media.istockphoto.com/id/1035728732/photo/dark-texture-background.jpg?b=1&s=170667a&w=0&k=20&c=oNwvWoWtI1uIAghJ8eBAJcSe4vXRIpOFwG8AXWoMBlo=);
+    background-size: cover;
+   
+}
+.content
+{
+    max-width: 800px;
+    text-align: center;
+}
+
+.content h2
+{
+    font-size: 36px;
+    font-weight: 500;
+    color: #00bcd4;
+    margin-top: 50px;
+    
+}
+
+.content p
+{
+    font-weight: 300;
+    color: #fff;
+}
+
+.container 
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+   
+}
+
+.container .contactInfo
+{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .contactInfo .box
+{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+
+.container .contactInfo .box .icon
+{
+    min-width: 60px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    border-radius: 50%;
+    font-size: 22px;
+}
+
+.container .contactInfo .box .text
+{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #fff;
+    flex-direction: column;
+    font-weight: 300;
+}
+
+.container .contactInfo .box .text h3
+{
+    font-weight: 500;
+    color: #00bcd4;
+}
+
+.contactForm
+{
+    width: 40%;
+    padding: 40px;
+    background: #fff;
+    
+}
+
+.contactForm h2
+{
+    font-size: 30px;
+    color: #333;
+    font-weight: 500;
+}
+
+.contactForm .inputBox
+{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;  
+}
+
+.contactForm .inputBox input,
+.contactForm .inputBox textarea
+{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+
+.contactForm .inputBox span
+{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span
+{
+    color: #e91e63;
+    font-size: 12px;
+    transform: translate(-20px);
+}
+
+.contactForm .inputBox input[type="submit"]
+{
+    width: 100px;
+    background: #00bcd4;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+
+
+
+
+        
